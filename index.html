@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Pizza Friday Quest 🍕</title>
+<title>Friday Quest 🍕</title>
 <style>
 :root{--bg:#fff4e0;--card:#fff;--ink:#3a2418;--accent:#e8432d;--gold:#f6b73c;--soft:#ffe3b8;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -102,7 +102,7 @@ function spawn(){
     var m = document.getElementById("msg");
     if(type==="🍕"){score++; m.textContent=["Yum!","Nice catch!","Cheesy!","Slice slice baby"][score%4]}
     else if(type==="🍍"){score=Math.max(0,score-1); m.textContent="Pineapple?! Minus one 😤"}
-    else {m.textContent="Karak & Coke, saved for Friday ✨"}
+    else {m.textContent="Karak Coke, saved for Friday ✨"}
     update();
     if(score>=10) win();
   };
@@ -135,7 +135,7 @@ function yes(){
   confetti();
   var d=document.getElementById("done");
   d.classList.remove("hidden");
-  var text="Yes! See you soon for pizza, a movie and karak & coke 🍕🎬☕";
+  var text="Yes! See you soon for pizza, a movie and karak coke 🍕🎬☕";
   d.innerHTML="Perfect. See you soon! 🥰<br><br>";
   if(MY_NUMBER){
     d.innerHTML+='<a class="btn" href="https://wa.me/'+MY_NUMBER+'?text='+encodeURIComponent(text)+'">Send my reply</a>';
